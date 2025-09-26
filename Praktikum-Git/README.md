@@ -4,7 +4,7 @@
 
 <h3>1. Download GIT dari link berikut https://git-scm.com/download/win</h3>
 
-<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/d53c2da9-a88f-4591-ae4f-ade2477e4ec5" />
+<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/7cbcb8a4-f0bd-4679-a213-cc6800a069ff" />
 
 - jalankan file .exe
 
@@ -20,7 +20,7 @@ git config --global user.name "Nama github"
 
 git config --global user.email "emailgihub@gamil.com"
 
-<img width="536" height="90" alt="image" src="https://github.com/user-attachments/assets/b9dcae95-80bd-4021-a737-8ae84fecc88c" />
+<img width="536" height="90" alt="image" src="https://github.com/user-attachments/assets/a487912c-e145-40fe-a205-c5319f20c802" />
 
 <h3>3. Membuat Folder Local di Git Bash</h3>
 
@@ -46,20 +46,16 @@ git config --global user.email "emailgihub@gamil.com"
 
 - git merge fitur-kontak, untuk menyatukan kedua branch
 
-<img width="575" height="758" alt="image" src="https://github.com/user-attachments/assets/4e056c15-3fd4-4b83-9bb3-2f3de3241154" />
+<img width="753" height="837" alt="image" src="https://github.com/user-attachments/assets/15f020f7-f67f-42a4-a836-c75e368fcaef" />
 
-<img width="576" height="567" alt="image" src="https://github.com/user-attachments/assets/964a1c3a-e212-4260-acc7-0b76abd3b557" />
+<img width="739" height="692" alt="image" src="https://github.com/user-attachments/assets/7376c322-2278-4c07-9148-4220bfaf2929" />
 
 <h3>4. Membuat Repository di Github, dan Hubungkan dengan Git</h3>
 
-- git remote add origin https://github.com/NaufalMS29/prak-1-git.git <- ini dari link git repository masing masing
+- git remote add origin https://github.com/NaufalMS29/Praktikum-PBW.git <- ini dari link git repository masing masing
 
 - git branch -M main
 
 - git push -u origin main
 
-<img width="576" height="111" alt="image" src="https://github.com/user-attachments/assets/a9cfbbbc-4be0-4125-aa53-a60bddc45fd7" />
-
-<img width="576" height="194" alt="image" src="https://github.com/user-attachments/assets/195ecdde-374c-4938-b23a-9a609f9a6dcf" />
-
-<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/a233ab27-3772-4787-9cca-919190d8d36e" />
+<img width="672" height="323" alt="image" src="https://github.com/user-attachments/assets/aaad6fa4-d24e-4150-b4f6-2e165a4ea12d" />
