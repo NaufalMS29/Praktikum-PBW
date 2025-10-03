@@ -47,8 +47,8 @@ Proyek ini dibuat sebagai bagian dari pembelajaran Laravel framework. LaraPress 
    - File view baru untuk halaman "Tentang Kami"
    - Berisi informasi tentang LaraPress sebagai proyek pembelajaran
 
-3. **resources/views/contact.blade.php** (BARU)
-   - File view baru untuk halaman "Contact"
+3. **resources/views/kontak.blade.php** (BARU)
+   - File view baru untuk halaman "kontak"
    - Berisi informasi tentang kontak pengembang
 
 4. **routes/web.php**
