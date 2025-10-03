@@ -7,55 +7,193 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+# LaraPress - Aplikasi Blog Sederhana
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+LaraPress adalah aplikasi blog sederhana yang dibangun menggunakan Laravel 12 untuk tujuan pembelajaran dan pengembangan keterampilan web development.
 
--   [Simple, fast routing engine](https://laravel.com/docs/routing).
--   [Powerful dependency injection container](https://laravel.com/docs/container).
--   Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
--   Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
--   Database agnostic [schema migrations](https://laravel.com/docs/migrations).
--   [Robust background job processing](https://laravel.com/docs/queues).
--   [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<img width="1919" height="1078" alt="image" src="https://github.com/user-attachments/assets/d92db5f6-9eb2-434a-a821-42640d6ed601" />
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Tampilan halaman utama LaraPress
 
-## Learning Laravel
+## 📋 Tentang Proyek
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Proyek ini dibuat sebagai bagian dari pembelajaran Laravel framework. LaraPress mendemonstrasikan konsep-konsep dasar Laravel seperti routing, views, dan struktur MVC.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 🚀 Fitur yang Sudah Diimplementasikan
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 1. *Halaman Utama (Welcome Page)*
+   - Mengubah tampilan default Laravel menjadi halaman sederhana
+   - Menampilkan judul "Selamat Datang di LaraPress"
+   - Struktur HTML yang bersih dan minimal
 
-## Laravel Sponsors
+### 2. *Halaman Tentang Kami*
+   - Route: /about
+   - Menampilkan informasi tentang LaraPress
+   - Menjelaskan tujuan proyek sebagai pembelajaran Laravel 12
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 3. *Halaman Kontak*
+   - Route: /contact
+   - Menampilkan informasi kontak pengembang
 
-### Premium Partners
+## 📁 Struktur File yang Dimodifikasi
 
--   **[Vehikl](https://vehikl.com)**
--   **[Tighten Co.](https://tighten.co)**
--   **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
--   **[64 Robots](https://64robots.com)**
--   **[Curotec](https://www.curotec.com/services/technologies/laravel)**
--   **[DevSquad](https://devsquad.com/hire-laravel-developers)**
--   **[Redberry](https://redberry.international/laravel-development)**
--   **[Active Logic](https://activelogic.com)**
+### File yang Dibuat/Dimodifikasi:
 
-## Contributing
+1. **resources/views/welcome.blade.php**
+   - Mengubah tampilan default Laravel yang kompleks menjadi struktur HTML sederhana
+   - Menampilkan pesan sambutan untuk pengunjung blog
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+2. **resources/views/about.blade.php** (BARU)
+   - File view baru untuk halaman "Tentang Kami"
+   - Berisi informasi tentang LaraPress sebagai proyek pembelajaran
 
-## Code of Conduct
+3. **resources/views/contact.blade.php** (BARU)
+   - File view baru untuk halaman "Contact"
+   - Berisi informasi tentang kontak pengembang
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+4. **routes/web.php**
+   - Menambahkan route baru /about yang mengarah ke view about.blade.php
+   - Menambahkan route baru /contact yang mengarah ke view contact.blade.php
 
-## Security Vulnerabilities
+## 🛠 Langkah-langkah Implementasi
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Step 1: Modifikasi Halaman Welcome
+Mengubah file resources/views/welcome.blade.php dari tampilan default Laravel (266 baris) menjadi HTML sederhana:
 
-## License
+html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selamat Datang di LaraPress</title>
+</head>
+<body>
+    <h1>Selamat Datang di Blog LaraPress</h1>
+    <p>Ini adalah halaman utama dari aplikasi blog kita.</p>
+    <a href="/about">Lihat Halaman Tentang Kami</a>
+    <br>
+    <a href="/">Kembali ke Halaman Utama</a>
+</body>
+</html>
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+### Step 2: Membuat Route Baru
+Menambahkan route baru di routes/web.php:
+
+php
+Route::get('/about', function () {
+    return view('about');
+});
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+
+### Step 3: Membuat View About
+Membuat file baru resources/views/about.blade.php:
+
+html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - LaraPress</title>
+</head>
+<body>
+    <h1>Tentang LaraPress</h1>
+    <p>LaraPress adalah aplikasi blog sederhana yang dibuat dengan Laravel 12.</p>
+    <p>Proyek ini dibuat untuk tujuan pembelajaran dan pengembangan keterampilan.</p>
+</body>
+</html>
+
+
+### Step 4: Membuat View Contact
+Membuat file baru resources/views/contact.blade.php:
+
+html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kontak Kami - LaraPress</title>
+</head>
+
+<body>
+    <h1>Kontak LaraPress</h1>
+    <p>Nama : Naufal Maulana Saputra</p>
+    <p>NPM : 4523210083</p>
+    <p>Email : naufal4523083@univpancasila.ac.id</p>
+    <p>No.Hp : 082118768976</p>
+    <a href="/tentang-kami">Lihat Halaman Tentang Kami</a>
+    <br>
+    <a href="/">Kembali ke Halaman Utama</a>
+</body>
+
+</html>
+
+
+## 🌐 Endpoint yang Tersedia
+
+| Route | Method | Deskripsi |
+|-------|--------|-----------|
+| / | GET | Halaman utama LaraPress |
+| /tentang-kami | GET | Halaman tentang LaraPress |
+| /contact | GET | Halaman tentang kontak pengembang |
+
+## 💻 Teknologi yang Digunakan
+
+- *Framework*: Laravel 12
+- *PHP Version*: 8.x
+- *Database*: MySQL
+- *Frontend*: Blade Template Engine, HTML, CSS
+- *Build Tool*: None
+
+## 📦 Instalasi
+
+1. Clone repository ini:
+bash
+git clone https://github.com/NaufalMS29/Praktikum-PBW.git
+
+
+2. Masuk Ke Directory LaraPress: cd .\LaraPress\
+
+
+3. Install dependencies:
+bash
+composer install
+npm install
+
+
+4. Buat file .env:
+bash
+cp .env.example .env
+
+
+5. Generate application key:
+bash
+php artisan key:generate
+
+
+6. Jalankan development server:
+bash
+php artisan serve
+
+
+7. Akses aplikasi di browser:
+
+http://localhost:8000
+
+
+## 📸 Screenshot
+
+### Halaman Utama
+<img width="1919" height="1078" alt="image" src="https://github.com/user-attachments/assets/d92db5f6-9eb2-434a-a821-42640d6ed601" />
+Halaman utama menampilkan sambutan sederhana kepada pengunjung blog LaraPress.
+
+### Halaman Tentang Kami
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/dc8c20a7-6f13-4eac-9aec-95e69067c91f" />
+Halaman Tentang LaraPress berisi informasi tentang LaraPress sebagai proyek pembelajaran
+
+### Halaman Kontak
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/cd76033f-d3ea-4cf9-8f39-14705617c1a8" />
+Halaman Kontak LarapPress berisi informasi kontak pengembang
