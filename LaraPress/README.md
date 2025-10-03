@@ -27,12 +27,12 @@ Proyek ini dibuat sebagai bagian dari pembelajaran Laravel framework. LaraPress 
    - Struktur HTML yang bersih dan minimal
 
 ### 2. *Halaman Tentang Kami*
-   - Route: /about
+   - Route: /tentang-kami
    - Menampilkan informasi tentang LaraPress
    - Menjelaskan tujuan proyek sebagai pembelajaran Laravel 12
 
 ### 3. *Halaman Kontak*
-   - Route: /contact
+   - Route: /kontak
    - Menampilkan informasi kontak pengembang
 
 ## 📁 Struktur File yang Dimodifikasi
@@ -52,8 +52,8 @@ Proyek ini dibuat sebagai bagian dari pembelajaran Laravel framework. LaraPress 
    - Berisi informasi tentang kontak pengembang
 
 4. **routes/web.php**
-   - Menambahkan route baru /about yang mengarah ke view about.blade.php
-   - Menambahkan route baru /contact yang mengarah ke view contact.blade.php
+   - Menambahkan route baru /tentang-kami yang mengarah ke view about.blade.php
+   - Menambahkan route baru /kontak yang mengarah ke view contact.blade.php
 
 ## 🛠 Langkah-langkah Implementasi
 
@@ -69,7 +69,7 @@ html
 <body>
     <h1>Selamat Datang di Blog LaraPress</h1>
     <p>Ini adalah halaman utama dari aplikasi blog kita.</p>
-    <a href="/about">Lihat Halaman Tentang Kami</a>
+    <a href="/tentang-kami">Lihat Halaman Tentang Kami</a>
     <br>
     <a href="/">Kembali ke Halaman Utama</a>
 </body>
@@ -80,11 +80,11 @@ html
 Menambahkan route baru di routes/web.php:
 
 php
-Route::get('/about', function () {
+Route::get('/tentang-kami', function () {
     return view('about');
 });
-Route::get('/contact', function () {
-    return view('contact');
+Route::get('/kontak', function () {
+    return view('kontak');
 });
 
 
@@ -93,22 +93,25 @@ Membuat file baru resources/views/about.blade.php:
 
 html
 <!DOCTYPE html>
-<html lang="id">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tentang Kami - LaraPress</title>
 </head>
+
 <body>
     <h1>Tentang LaraPress</h1>
-    <p>LaraPress adalah aplikasi blog sederhana yang dibuat dengan Laravel 12.</p>
-    <p>Proyek ini dibuat untuk tujuan pembelajaran dan pengembangan keterampilan.</p>
+    <p>LaraPress adalah sebuah proyek blog sederhana yang dibuat untuk mempelajari dasar-dasar framework Laravel 12.</p>
+    <a href="/kontak">Lihat Halaman Kontak</a>
+    <br>
+    <a href="/">Kembali ke Halaman utama</a>
 </body>
+
 </html>
 
 
-### Step 4: Membuat View Contact
-Membuat file baru resources/views/contact.blade.php:
+### Step 4: Membuat View kontak
+Membuat file baru resources/views/kontak.blade.php:
 
 html
 <!DOCTYPE html>
